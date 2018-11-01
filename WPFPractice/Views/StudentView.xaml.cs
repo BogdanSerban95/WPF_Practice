@@ -13,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WPFPractice
+namespace WPFPractice.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StudentView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StudentView : UserControl
     {
-        public MainWindow()
+        public StudentView()
         {
             InitializeComponent();
-        }
-
-        private void StudentViewControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            WPFPractice.ViewModels.StudentViewModel studentViewModel = new ViewModels.StudentViewModel();
-            studentViewModel.LoadStudents();
-
-            StudentViewControl.DataContext = studentViewModel;
         }
     }
 }
