@@ -23,6 +23,7 @@ namespace WPFPractice.Views
         public StudentView()
         {
             InitializeComponent();
+            this.DataContext = new WPFPractice.ViewModels.StudentViewModel();
         }
     }
 }

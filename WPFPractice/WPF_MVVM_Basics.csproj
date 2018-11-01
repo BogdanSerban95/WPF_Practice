@@ -79,7 +79,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\StudentModel.cs" />
+    <Compile Include="Models\Student.Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
