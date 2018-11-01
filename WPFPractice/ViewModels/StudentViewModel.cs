@@ -5,9 +5,34 @@ namespace WPFPractice.ViewModels
 {
     class StudentViewModel
     {
+        private Student _selectedStudent;
+
+        public Student SelectedStudent
+        {
+            get { return _selectedStudent; }
+            set
+            {
+                _selectedStudent = value;
+                DeleteCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        public MyICommand DeleteCommand { get; set; }
+
         public StudentViewModel()
         {
             LoadStudents();
+            DeleteCommand = new MyICommand(OnDelete, CanDelete);
+        }
+
+        public void OnDelete()
+        {
+            Students.Remove(SelectedStudent);
+        }
+
+        public bool CanDelete()
+        {
+            return SelectedStudent != null;
         }
 
         public ObservableCollection<Student> Students

@@ -54,5 +54,13 @@
         </DataTemplate>
     </UserControl.Resources>
 
-    <ListBox ItemsSource="{Binding Students}" ItemTemplate="{StaticResource studentsTemplate}"/>
+    <StackPanel Orientation="Horizontal">
+        <ListBox ItemsSource="{Binding Students}" 
+                 SelectedItem="{Binding SelectedStudent}"/>
+        <Button Content="Delete"
+                Command="{Binding DeleteCommand}"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Width="75"/>
+    </StackPanel>
 </UserControl>
